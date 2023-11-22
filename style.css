@@ -148,6 +148,7 @@ header nav .search_user .search {
   right: 0;
   top: 58px;
   z-index: 99999;
+  overflow-y: auto;
 }
 
 header nav .search_user .search .card {
@@ -196,5 +197,15 @@ header nav .search_user .search .card .cont h3 {
 
 header nav .search_user .search .card .cont p {
   font-size: 10px;
+  color: aliceblue;
 }
+
+header nav .search_user .search .card .cont span {
+  background: yellow;
+  color: #000;
+  padding: 0px 3px;
+  margin: 0px 5px 0px 10px;
+  font-weight: 500;
+}
+
 
