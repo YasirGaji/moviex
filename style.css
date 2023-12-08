@@ -151,6 +151,20 @@ header nav .search_user .search {
   overflow-y: auto;
 }
 
+header nav .search_user .search::-webkit-scrollbar {
+  width: 5px;
+  background: rgb(255, 255, 255, .3);
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+header nav .search_user .search::-webkit-scrollbar-thumb {
+  width: 5px;
+  background: rgb(255, 255, 255, .3);
+  border-radius: 5px;
+  visibility: hidden;
+}
+
 header nav .search_user .search .card {
   position: relative;
   width: 100%;
