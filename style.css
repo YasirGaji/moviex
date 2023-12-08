@@ -143,8 +143,8 @@ header nav .search_user img {
 header nav .search_user .search {
   position: absolute;
   width: 320px;
-  height: 190px;
-  border: 1px solid #fff;
+  height: 270px;
+  /* border: 1px solid #fff; */
   right: 0;
   top: 58px;
   z-index: 99999;
@@ -163,6 +163,14 @@ header nav .search_user .search::-webkit-scrollbar-thumb {
   background: rgb(255, 255, 255, .3);
   border-radius: 5px;
   visibility: hidden;
+}
+
+header nav .search_user .search:hover::-webkit-scrollbar {
+  visibility: visible;
+}
+
+header nav .search_user .search:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
 }
 
 header nav .search_user .search .card {
