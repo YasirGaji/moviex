@@ -230,4 +230,45 @@ header nav .search_user .search .card .cont span {
   font-weight: 500;
 }
 
+header .content {
+  position: relative;
+  color: #fff;
+  margin-top: 150px;
+  padding-left: 50px;
+}
+
+header .content h1 {
+  font-size: 50px;
+}
+
+header .content p {
+  font-size: 11px;
+  width: 350px;
+  word-break: break-all;
+}
+
+header .content .details {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+header .content .details h4 {
+  color: rgb(255, 255, 255, .8);
+  font-size: 10px;
+  margin-right: 10px;
+}
+
+header .content .details h5 {
+  color: rgb(142, 230, 45);
+  font-size: 10px;
+  margin-right: 10px;
+}
+
+header .content .details h4 {
+  color: #fff;
+  font-size: 10px;
+  marg
+}
+
 
