@@ -268,7 +268,42 @@ header .content .details h5 {
 header .content .details h4 {
   color: #fff;
   font-size: 10px;
+  margin-right: 10px;
+}
 
+header .content .details h3 {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+}
+
+header .content .details h3 span {
+  background: yellow;
+  color: #000;
+  padding: 0px 3px;
+  margin: 0px 5px 0px 5px;
+  font-weight: 500;
+}
+
+header .content .details h3 i {
+  margin-right: 5px;
+}
+
+header .content .btns {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+header .content .btns a {
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #00bdff, #0079ff);
+  color: #fff;
+  margin-left: 10px;
+  text-decoration: none;
 }
 
 
