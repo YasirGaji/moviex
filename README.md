@@ -6,7 +6,7 @@ This is a movie website built purely with Html, Css, and Javascript reference ta
 
 ## What I Learned
 
-  1. None yet
+  1. Linear animation in button rendering in css
   
 ## Errors  I Faced
 
