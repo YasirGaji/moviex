@@ -304,6 +304,31 @@ header .content .btns a {
   color: #fff;
   margin-left: 10px;
   text-decoration: none;
+  border-radius: 10%;
+  -webkit-animation: button 1s linear infinite ;
+          animation: button 1s linear infinite ;
+}
+
+@-webkit-keyframes button {
+  0%{ background: linear-gradient(0deg, #00bdff, #0079ff); }
+  12%{ background: linear-gradient(45deg, #00bdff, #0079ff); }
+  24%{ background: linear-gradient(95deg, #00bdff, #0079ff); }
+  36%{ background: linear-gradient(145deg, #00bdff, #0079ff); }
+  43%{ background: linear-gradient(195deg, #00bdff, #0079ff); }
+  60%{ background: linear-gradient(245deg, #00bdff, #0079ff); }
+  72%{ background: linear-gradient(295deg, #00bdff, #0079ff); }
+  100%{ background: linear-gradient(360deg, #00bdff, #0079ff); }
+}
+
+@keyframes button {
+  0%{ background: linear-gradient(0deg, #00bdff, #0079ff); }
+  12%{ background: linear-gradient(45deg, #00bdff, #0079ff); }
+  24%{ background: linear-gradient(95deg, #00bdff, #0079ff); }
+  36%{ background: linear-gradient(145deg, #00bdff, #0079ff); }
+  43%{ background: linear-gradient(195deg, #00bdff, #0079ff); }
+  60%{ background: linear-gradient(245deg, #00bdff, #0079ff); }
+  72%{ background: linear-gradient(295deg, #00bdff, #0079ff); }
+  100%{ background: linear-gradient(360deg, #00bdff, #0079ff); }
 }
 
 
