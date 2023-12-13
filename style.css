@@ -351,6 +351,10 @@ header section .cards {
   overflow: auto;
 }
 
+header section .cards::-webkit-scrollbar {
+  display: none;
+}
+
 header section .cards .card {
   position: relative;
   min-width: 130px;
@@ -360,6 +364,13 @@ header section .cards .card {
   margin-right: 10px;
   background: #000;
   transition: .3s linear;
+}
+
+header section .cards .card .poster {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  position: relative;
 }
 
 
