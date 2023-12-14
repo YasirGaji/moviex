@@ -16,4 +16,4 @@ This is a movie website built purely with Html, Css, and Javascript reference ta
   
   1. None yet
 
-## [View Project](https://yasirgaji.com)
+## [View Project](https://moviex-six-beige.vercel.app/)
