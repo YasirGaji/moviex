@@ -453,6 +453,36 @@ header section .cards .card:hover .rest_card {
   opacity: 1;
 }
 
+header section .bi-chevron-left, .bi-chevron-right {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  width: 25px;
+  height: 25px;
+  background: #0079ff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 12px;
+  cursor: pointer;
+  transition: .3s linear;
+  z-index: 999999;
+}
+
+header section .bi-chevron-right {
+  left: unset;
+  right: 3%;
+}
+
+header section:hover .bi-chevron-right {
+  opacity: 1;
+}
+
+header section:hover .bi-chevron-left {
+  opacity: 1;
+}
 
 
 
