@@ -7,6 +7,8 @@ This is a movie website built purely with Html, Css, and Javascript reference ta
 ## What I Learned
 
   1. Linear animation in button rendering in css
+  2. The scroll-behaviour css term
+  3. how to simply functionalise scroll buttons in javascript
   
 ## Errors  I Faced
 

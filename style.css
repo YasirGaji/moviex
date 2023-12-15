@@ -349,6 +349,7 @@ header section .cards {
   display: flex;
   align-items: center;
   overflow-x: auto;
+  scroll-behavior: smooth;
 }
 
 header section .cards::-webkit-scrollbar {
@@ -468,7 +469,7 @@ header section .bi-chevron-left, .bi-chevron-right {
   font-size: 12px;
   cursor: pointer;
   transition: .3s linear;
-  z-index: 999999;
+  z-index: 999999 !important;
 }
 
 header section .bi-chevron-right {
