@@ -182,6 +182,7 @@ header nav .search_user .search .card {
   margin-bottom: 5px;
   padding: 3px 0px;
   text-decoration: none;
+  display: none;
 }
 
 header nav .search_user .search .card::before {

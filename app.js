@@ -2,6 +2,7 @@ let left_btn = document.getElementsByClassName('bi-chevron-left')[0];
 let right_btn = document.getElementsByClassName('bi-chevron-right')[0];
 let cards = document.getElementsByClassName('cards')[0];
 let search = document.getElementsByClassName('search')[0];
+let search_input = document.getElementById('search_input');
 
 
 left_btn.addEventListener('click', () => {
@@ -58,5 +59,24 @@ fetch(json_url).then(Response => Response.json())
     `
 
     search.appendChild(card);
+  });
+
+  // Search filter functionality 
+  search_input.addEventListener('keyup', () => {
+    let filter = search_input.value.toUpperCase();
+    let a = search.getElementsByTagName('a');
+
+    for (let index = 0; index < a.length; index++) {
+      let b = a[index].getElementsByClassName('cont')[0];
+
+      let TextValue = b.textContent || b.innerText;
+      if (TextValue.toUpperCase().indexOf(filter) > -1){
+        a[index].style.display = "flex";
+        search.style.visibility = "visible";
+        search.style.opacity = 1;
+      } else {
+        a[index].style.display = "none";
+      }
+    }
   })
 })
