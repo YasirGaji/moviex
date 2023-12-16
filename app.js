@@ -77,6 +77,10 @@ fetch(json_url).then(Response => Response.json())
       } else {
         a[index].style.display = "none";
       }
+      if (search_input.value == 0) {
+        search.style.visibility = "hidden";
+        search.style.opacity = 0;
+      }
     }
   })
 })
