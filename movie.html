@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+  <title>The Movie</title>
+</head>
+<body>
+  <header>
+    <video src="video/Marvel.mp4" autoplay muted></video>
+
+    <nav>
+      <div class="logo_v1">
+        <img src="img/favicon.png" alt="Logo">
+
+        <ul>
+          <li>
+            <a href="/" id="home">Home</a>
+          </li>
+
+          <li>
+            <a href="#" id="series">Series</a>
+          </li>
+
+          <li>
+            <a href="#" id="movies">Movies</a>
+          </li>
+
+          <li>
+            <a href="#" id="films">Films</a>
+          </li>
+
+          <li>
+            <a href="#">Login</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="search_user">
+        <input type="text" placeholder="search..." id="search_input">
+        <img src="img/favicon.png" alt="user">
+        <div class="search">
+          <!-- <a href="#" class="card">
+            <img src="img/favicon.png" alt="movie_search">
+            <div class="cont">
+              <h3>The First Movie</h3>
+              <p>Educative, 2023, <span>IMDB </span> <i class="bi bi-star-fill"></i> 9.6</p>
+            </div>
+          </a> -->
+        </div>
+      </div>
+    </nav>
+    <div class="content">
+      <h1 id="title">Louis Stetham</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum omnis saepe magni expedita necessitatibus. Magnam...</p>
+      <div class="details">
+        <h4>Lorem ipsum dolor adipisicing.</h4>
+        <h5 id="gen">Thriller</h5>
+        <h4 id="date">2023</h4>
+        <h3 id="rate"><span>IMDB </span> <i class="bi bi-star-fill"></i> 9.6</h3>
+      </div>
+      <div class="btns">
+       <a href="#" id="play">Watch <i class="bi bi-play-fill"></i></a>
+       <a href="#" download="Movie 480ph" id="low_q">480ph</a>
+       <a href="#" download="Movie 720ph" id="medium_q">720ph</a>
+       <a href="#" download="Movie 1080ph" id="high_q">1080ph</a>
+      </div>
+    </div>
+
+    <section>
+      <h4>Popular</h4>
+      <i class="bi bi-chevron-left"></i>
+      <i class="bi bi-chevron-right"></i>
+      <div class="cards"></div>
+    </section>
+  </header> 
+
+
+  <script src="app.js"></script>
+
+  <script>
+    fetch(json_url).then((Response) => Response.json())
+    .then(data => {
+      let movie_array = data.filter(ele => {
+        return ele.name === "The Boys";
+      });
+
+      document.getElementById('title').innerText = movie_array[0].name;
+      document.getElementsByTagName('video')[0].src = movie_array[0].trailer;
+      // document.getElementsByTagName('video')[0].setAttribute('src', movie_array[0].trailer)
+      document.getElementsByTagName('video')[0].play();
+      document.getElementById('low_q').href = movie_array[0].low;
+      document.getElementById('medium_q').href = movie_array[0].medium;
+      document.getElementById('high_q').href = movie_array[0].high;
+      document.getElementById('date').innerText = movie_array[0].date;
+      document.getElementById('rate').innerHTML = `<span>IMDB </span> <i class="bi bi-star-fill"></i> ${data[0].imdb}`
+    })
+  </script>
+</body>
+</html>

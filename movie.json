@@ -6,8 +6,9 @@
   "bposter": "img/movie-time.avif",
   "genre": "Action",
   "type": "series",
-  "url": "money heist.html",
-  "trailer": "money heist trailer.mp4",
+  "url": "movie.html",
+  "trailer": "https://www.youtube.com/watch?v=2l7lNbxV8Pk&t=2s",
+  "low": "video/marvel.mp4",
   "medium": "video money heist 720ph.mp4",
   "high": "video money heist 1080ph.mp4"
 }, {
@@ -18,8 +19,9 @@
   "bposter": "img/movie-time.avif",
   "genre": "Action",
   "type": "movies",
-  "url": "money heist.html",
+  "url": "movie.html",
   "trailer": "money heist trailer.mp4",
+  "low": "video/marvel.mp4",
   "medium": "video money heist 720ph.mp4",
   "high": "video money heist 1080ph.mp4"
 }, {
@@ -30,8 +32,9 @@
   "bposter": "img/movie-time.avif",
   "genre": "Action",
   "type": "films",
-  "url": "money heist.html",
+  "url": "movie.html",
   "trailer": "money heist trailer.mp4",
+  "low": "video/marvel.mp4",
   "medium": "video money heist 720ph.mp4",
   "high": "video money heist 1080ph.mp4"
 }]
