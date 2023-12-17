@@ -82,5 +82,19 @@ fetch(json_url).then(Response => Response.json())
         search.style.opacity = 0;
       }
     }
+  });
+
+  let video = document.getElementsByTagName('video')[0];
+  let play = document.getElementById('play');
+
+  play.addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+      play.innerHTML = `Play <i class="bi bi-pause-fill"></i>`
+    } else {
+      video.pause();
+      play.innerHTML = `Watch <i class="bi bi-play-fill"></i>`
+    }
   })
+  
 })
