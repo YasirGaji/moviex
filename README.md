@@ -9,6 +9,7 @@ This is a movie website built purely with Html, Css, and Javascript reference ta
   1. Linear animation in button rendering in css
   2. The scroll-behaviour css term
   3. how to simply functionalise scroll buttons in javascript
+  4. How to dynamically render smae page navbar results
   
 ## Errors  I Faced
 

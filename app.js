@@ -46,7 +46,7 @@ fetch(json_url).then(Response => Response.json())
 
   // Search functionality
   data.forEach(element => {
-    let { name, imdb, date, sposter, bposter, genre, url }= element;
+    let { name, imdb, date, sposter, bposter, genre, url } = element;
     let card = document.createElement('a');
     card.classList.add(`card`);
     card.href = url;
@@ -84,6 +84,7 @@ fetch(json_url).then(Response => Response.json())
     }
   });
 
+  // Play button dynamic rendering 
   let video = document.getElementsByTagName('video')[0];
   let play = document.getElementById('play');
 
@@ -95,6 +96,101 @@ fetch(json_url).then(Response => Response.json())
       video.pause();
       play.innerHTML = `Watch <i class="bi bi-play-fill"></i>`
     }
+  });
+
+  // Navigation bar dynamic rendering
+  let series = document.getElementById('series');
+  let movies = document.getElementById('movies');
+  let films = document.getElementById('films');
+
+  series.addEventListener('click', () => {
+    cards.innerHTML = ``;
+
+    let series_array = data.filter(ele => {
+      return ele.type === "series";
+    });
+
+    series_array.forEach((ele, i) => {
+      let { name, imdb, date, sposter, bposter, genre, url }= ele;
+      let card = document.createElement('a');
+      card.classList.add(`card`);
+      card.href = url;
+      card.innerHTML = `
+        <img src="${sposter}" alt="${name}" class="poster">
+        <div class="rest_card">
+          <img src="${bposter}" alt="">
+          <div class="cont">
+            <h4>${name}</h4>
+            <div class="sub">
+              <p>${genre}, ${date}</p>
+              <h3><span>IMDB</span> <i class="bi bi-star-fill"></i> ${imdb}</h3>
+            </div>
+          </div>
+        </div>
+      `
+  
+      cards.appendChild(card);
+    });
+  });
+
+  movies.addEventListener('click', () => {
+    cards.innerHTML = ``;
+
+    let movies_array = data.filter(ele => {
+      return ele.type === "movies"
+    });
+
+    movies_array.forEach((ele, i) => {
+      let { name, imdb, date, sposter, bposter, genre, url }= ele;
+      let card = document.createElement('a');
+      card.classList.add(`card`);
+      card.href = url;
+      card.innerHTML = `
+        <img src="${sposter}" alt="${name}" class="poster">
+        <div class="rest_card">
+          <img src="${bposter}" alt="">
+          <div class="cont">
+            <h4>${name}</h4>
+            <div class="sub">
+              <p>${genre}, ${date}</p>
+              <h3><span>IMDB</span> <i class="bi bi-star-fill"></i> ${imdb}</h3>
+            </div>
+          </div>
+        </div>
+      `
+  
+      cards.appendChild(card);
+    });
+  });
+
+  films.addEventListener('click', () => {
+    cards.innerHTML = ``;
+
+    let films_array = data.filter(ele => {
+      return ele.type === "films"
+    });
+
+    films_array.forEach((ele, i) => {
+      let { name, imdb, date, sposter, bposter, genre, url }= ele;
+      let card = document.createElement('a');
+      card.classList.add(`card`);
+      card.href = url;
+      card.innerHTML = `
+        <img src="${sposter}" alt="${name}" class="poster">
+        <div class="rest_card">
+          <img src="${bposter}" alt="">
+          <div class="cont">
+            <h4>${name}</h4>
+            <div class="sub">
+              <p>${genre}, ${date}</p>
+              <h3><span>IMDB</span> <i class="bi bi-star-fill"></i> ${imdb}</h3>
+            </div>
+          </div>
+        </div>
+      `
+  
+      cards.appendChild(card);
+    });
   })
   
 })
